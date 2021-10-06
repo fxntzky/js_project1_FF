@@ -1,0 +1,206 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0;
+  background: #e5e5e5;
+}
+.website-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #0a0613,
+    #120b1d,
+    #1f153c,
+    #2b1c54,
+    #5b0060,
+    #870160,
+    #ac255e,
+    #e16b5c,
+    #ffb56b
+  );
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.marquee-wrapper {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow: hidden;
+  background-color: rgb(179, 175, 175, 0.2);
+  border-radius: 15px;
+  color: rgba(88, 85, 85, 0.959);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(800px);
+}
+.marquee-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: 0.1s ease-out;
+  animation: float-text 55s linear infinite;
+  animation-delay: 0.3s;
+}
+.marquee-symbol {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  margin-left: 15px;
+}
+
+.marquee-price {
+  color: rgb(233, 131, 131);
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  margin-left: 15px;
+}
+.searchbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  height: 60px;
+}
+
+input {
+  width: 100%;
+  height: 60px;
+  text-transform: none;
+  text-indent: 15px;
+  text-shadow: none;
+  border: 0px;
+  cursor: text;
+  outline: none;
+  border-radius: 6px;
+  background-color: rgba(179, 175, 175, 0.3);
+  border-radius: 15px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(800px);
+}
+
+input::placeholder {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.button {
+  width: 120px;
+  height: 60px;
+  margin-left: 15px;
+  font-size: 20px;
+  color: #ffffff;
+  border-radius: 15px;
+  background-color: rgba(255, 99, 132, 0.4);
+  box-shadow: 0 0 15px rgba(255, 124, 124, 0.753);
+  backdrop-filter: blur(800px);
+  border: 0;
+  cursor: pointer;
+}
+.button:hover {
+  color: white;
+  box-shadow: 0px 0px 6px 0 #fff, 1px 1px 6px 0 rgb(233, 131, 131);
+  text-shadow: 0px 0px 7px white;
+}
+button:active {
+  background-color: #4adede;
+  box-shadow: inset 0px 9px 32px -1px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 0px 17px white;
+}
+
+.results-wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 15px;
+  border-radius: 6px;
+  background-color: rgba(179, 175, 175, 0.3);
+  border-radius: 15px;
+  color: rgba(88, 85, 85, 0.959);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(800px);
+}
+.stocks-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 15px;
+  margin-left: 25px;
+}
+.stocks-fetched {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  margin-left: 15px;
+}
+.stocks-fetched:hover {
+  color: white;
+  text-shadow: 0px 0px 7px white;
+}
+.stocks-fetched:active {
+  background-color: #4adede;
+  text-shadow: 0px 0px 17px white;
+  cursor: pointer;
+}
+.stocks-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-color: grey;
+}
+
+.highlight {
+  background-color: rgba(255, 99, 132, 0.6);
+  border-radius: 5px;
+}
+.results-wrapper-remove {
+  display: none;
+}
+
+@keyframes float-text {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .searchbar-wrapper {
+    width: 50%;
+  }
+  .results-wrapper {
+    width: 50%;
+  }
+}

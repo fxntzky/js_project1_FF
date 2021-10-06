@@ -1,0 +1,128 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0;
+  background: #e5e5e5;
+}
+.website-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #0a0613,
+    #120b1d,
+    #1f153c,
+    #2b1c54,
+    #5b0060,
+    #870160,
+    #ac255e,
+    #e16b5c,
+    #ffb56b
+  );
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.results-wrapper {
+  width: 60%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 15px;
+  margin: 25px;
+  border-radius: 6px;
+  border-radius: 15px;
+  color: rgba(88, 85, 85, 0.959);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(800px);
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+}
+.titleDiv {
+  display: none;
+}
+.stocks-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.stocks-fetched {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  margin: 15px;
+  margin-top: 55px;
+}
+.company-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+}
+.priceStock-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+}
+.company-name {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  margin-left: 15px;
+}
+.company-description {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  margin-left: 15px;
+}
+.stocks-image {
+  margin: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  background-size: contain;
+  background-color: grey;
+}
+.myChart {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  padding: 25px;
+  border-radius: 6px;
+  border-radius: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(800px);
+}
+
+.results-wrapper-remove {
+  display: none;
+}
+
+@media only screen and (min-width: 780px) {
+  .results-wrapper {
+    width: 50%;
+  }
+}
